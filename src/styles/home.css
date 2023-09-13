@@ -9,6 +9,18 @@
 	font-display: swap;
 }
 
+.dark main {	
+	main {
+		background: #212529;
+	}
+}
+
+.light  {
+	main {
+		background: #f8f9fa;
+	}	
+}
+
 html {
 	background: #212529;
 }
@@ -67,14 +79,6 @@ header {
 			bottom: 0;
 		}
 	}
-}
-
-.dark main {
-	background: #212529;
-}
-
-.light main {
-	background: #f8f9fa;
 }
 
 main {
