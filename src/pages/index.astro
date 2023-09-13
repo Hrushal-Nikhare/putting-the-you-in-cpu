@@ -12,7 +12,10 @@ import ScrollPadding from '../components/ScrollPadding.astro'
 const intro = await getEntryBySlug('chapters', 'intro')
 const chapterOne = await getEntryBySlug('chapters', 'the-basics')
 const { Content: Intro } = await intro.render()
+
+// Dev Stuff
 import ThemeSwitcher from '../components/ThemeSwitcher.astro'
+import IconThemeSwitcher from '../components/IconThemeSwitcher.astro'
 ---
 
 <html lang='en'>
@@ -49,6 +52,7 @@ import ThemeSwitcher from '../components/ThemeSwitcher.astro'
 	</header>
 	<ExternalNav noScript currentChapterSlug='intro' />
 	<ThemeSwitcher />
+	<IconThemeSwitcher />
 	<main>
 		<div class='content'>
 			<h2 id='from-the-beginning'>
