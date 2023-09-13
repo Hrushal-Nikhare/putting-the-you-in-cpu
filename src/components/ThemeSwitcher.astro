@@ -1,9 +1,8 @@
 ---
-import { Icon } from "astro-icon";
+
 ---
 
 <div class="container">
-  <Icon class="icon" name="heroicons-outline:sun" />
   <select name="themeSwitch" id="themeSwitch">
     <option value="system">System</option>
     <option value="dark">Dark</option>
@@ -12,17 +11,12 @@ import { Icon } from "astro-icon";
 </div>
 
 <style>
-  :global(.dark) {
+  /* :global(.dark) {
     color-scheme: dark;
-  }
+  } */
   .container {
     display: inline-flex;
     align-items: center;
-  }
-  .icon {
-    margin-right: 0.5rem;
-    width: 1rem;
-    height: 1rem;
   }
 </style>
 
