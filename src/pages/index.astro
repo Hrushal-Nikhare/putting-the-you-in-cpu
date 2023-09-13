@@ -12,6 +12,7 @@ import ScrollPadding from '../components/ScrollPadding.astro'
 const intro = await getEntryBySlug('chapters', 'intro')
 const chapterOne = await getEntryBySlug('chapters', 'the-basics')
 const { Content: Intro } = await intro.render()
+import ThemeSwitcher from '../components/ThemeSwitcher.astro'
 ---
 
 <html lang='en'>
@@ -30,7 +31,6 @@ const { Content: Intro } = await intro.render()
 	<a class='orpheus-flag' target='_blank' href='https://hackclub.com/'>
 		<img src='/orpheus-flag.svg' width='560' height='315' alt='A project by Hack Club' title='A project by Hack Club' />
 	</a>
-
 	<header>
 		<img src='/squiggles/top.svg' class='squiggles top' alt='' aria-hidden='true' />
 		<div class='content'>
@@ -48,7 +48,7 @@ const { Content: Intro } = await intro.render()
 		<img src='/squiggles/bottom.svg' class='squiggles bottom' alt='' aria-hidden='true' />
 	</header>
 	<ExternalNav noScript currentChapterSlug='intro' />
-
+	<ThemeSwitcher />
 	<main>
 		<div class='content'>
 			<h2 id='from-the-beginning'>

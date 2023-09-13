@@ -1,0 +1,55 @@
+---
+import { Icon } from "astro-icon";
+---
+
+<div class="container">
+  <Icon class="icon" name="heroicons-outline:sun" />
+  <select name="themeSwitch" id="themeSwitch">
+    <option value="system">System</option>
+    <option value="dark">Dark</option>
+    <option value="light">Light</option>
+  </select>
+</div>
+
+<style>
+  :global(.dark) {
+    color-scheme: dark;
+  }
+  .container {
+    display: inline-flex;
+    align-items: center;
+  }
+  .icon {
+    margin-right: 0.5rem;
+    width: 1rem;
+    height: 1rem;
+  }
+</style>
+
+<script>
+  const select = document.getElementById("themeSwitch") as HTMLSelectElement;
+  const theme = localStorage.getItem("theme");
+  const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+
+  if (theme !== null) {
+    select.value = theme;
+  } else {
+    select.value = systemTheme;
+  }
+
+  function updateTheme(value) {
+    const theme = value === "system" ? systemTheme : value;
+    document.documentElement.classList.remove("light", "dark");
+    document.documentElement.classList.add(theme);
+    localStorage.setItem("theme", value);
+  }
+
+  updateTheme(select.value);
+
+  select.addEventListener("change", (event: Event) => {
+    const select = event.target as HTMLSelectElement;
+    updateTheme(select.value);
+  });
+</script>
