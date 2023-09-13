@@ -69,6 +69,14 @@ header {
 	}
 }
 
+.dark main {
+	background: #212529;
+}
+
+.light main {
+	background: #f8f9fa;
+}
+
 main {
 	width: 100%;
 	background: #212529;
