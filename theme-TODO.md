@@ -4,3 +4,5 @@
 - [ ] Complete Theme Implementation
 - [ ] Theme Switcher for all pages
 - [ ] Images
+- [ ] Styling home page
+- [ ] Styling chapter pages
